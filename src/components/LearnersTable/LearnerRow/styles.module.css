@@ -1,0 +1,36 @@
+.row td {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.personalData h6 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.personalData img {
+    border-radius: 50%;
+    margin: 0px 10px;
+    width: 55px;
+    height: 55px;
+}
+
+.ratingData {
+    width: 70px;
+    height: 70px;
+}
+
+.viewLink {
+    color: #1f00b8;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+.viewLink:hover {
+    color: black;
+
+    transition: 0.5s all;
+}

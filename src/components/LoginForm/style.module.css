@@ -1,0 +1,126 @@
+.main {
+    border-radius: 1%;
+    /* border: 1px solid black; */
+    height: 500px;
+    width: 900px;
+    overflow: hidden;
+
+}
+
+
+.sloganCol {
+    background-color: #1f00b8;
+    color: white;
+}
+
+.sloganCol p {
+    color: white;
+    width: 70%;
+
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+
+}
+
+.formCol {
+    background: white;
+}
+
+
+.welcomeContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcomeContainer h1 {
+    font-weight: 600;
+    font-size: 28px !important;
+}
+
+.welcomeContainer span {
+    font-weight: 800;
+}
+
+
+
+.loginBtn {
+    color: white;
+    background-color: #1f00b8;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    border: #1f00b8 1px solid;
+    font-size: 23px;
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+
+}
+
+.loginBtn:hover {
+    color: white;
+    background-color: #16046d;
+    transition: 0.5s all;
+}
+
+.loginBtn:disabled {
+    background-color: grey;
+    color: white !important;
+    border: 1px solid grey;
+}
+
+.alert {
+    position: absolute;
+    transform: translate(0%, 147%);
+    z-index: 1;
+}
+
+.formCol small {
+    color: #c4c9c3;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.formCol small:hover {
+    text-decoration: underline;
+}
+
+.formControlContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.formControlContainer label {
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5px !important;
+}
+
+.formControlContainer input {
+    border-radius: 5px;
+    border: 1px solid #e3e0e4;
+    padding: 5px;
+    width: 100%;
+    padding: 5px 15px;
+}
+
+.formControlContainer input::placeholder {
+    color: #e7e7e8;
+    font-weight: 500px;
+
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+}

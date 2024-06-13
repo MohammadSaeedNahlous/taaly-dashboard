@@ -1,0 +1,53 @@
+.main {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 97%;
+    margin: 0px auto;
+    height: 110vh;
+
+}
+
+
+.overallActivityText {
+
+    color: #8d8a97;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+}
+
+.overallActivityInnerText {
+
+    color: #1f00b8;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+
+.manageOrgsCard {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #1f00b8;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.manageOrgsCard h6 {
+    font-size: 24px;
+}

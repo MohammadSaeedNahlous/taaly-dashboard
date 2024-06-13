@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 97%;
+    margin-top: 20px;
+    margin: auto;
+
+}
+
+.cardContainer {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 10px
+}
+
+.titleText {
+    color: #1e01b8;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.innerTextCircular {
+    color: #1e01b8;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.titleText1 {
+    color: #b5e13d;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.innerTextCircular2 {
+    color: #b5e13d;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.cardDesc {
+    font-size: 16px;
+    width: 70%;
+    margin: 10px auto;
+    color: #8C8A96;
+    font-weight: 500;
+    text-align: center;
+}

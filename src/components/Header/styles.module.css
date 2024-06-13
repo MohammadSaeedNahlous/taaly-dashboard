@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+    background-color: #e8e7f8;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.brandContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.brandContainer img {
+    height: 50px;
+}
+
+.brandContainer h6 {
+    margin: 0 8px;
+
+    color: #1f00b8;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.searchContainer {
+    position: relative;
+    /* max-width: 200px; */
+    width: 30%;
+    min-width: 300px;
+}
+
+.searchContainer input {
+    border: 1px solid #b0b1b8;
+    border-radius: 10px;
+    padding-left: 50px;
+}
+
+.searchContainer input::placeholder {
+    font-weight: 600;
+    color: #b0b1b8;
+}
+
+.searchContainer button {
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    border: none;
+    background-color: transparent;
+}
+
+.userInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userInfoContainer h1 {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 15px;
+}
+
+.userImg {
+    height: 50px;
+}
+
+.notificationContainer {
+    position: relative;
+}
+
+.bellIcon {
+    height: 20px;
+}
+
+.notificationDot {
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #ce0101;
+    display: block;
+    top: 3px;
+    right: 2px;
+}

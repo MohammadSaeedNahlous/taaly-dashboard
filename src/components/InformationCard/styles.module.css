@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #1f00b8;
+    height: 100px;
+    margin: 15px 0px;
+}
+
+
+.imgContainer {
+    border-radius: 50%;
+    width: 33%;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.dataCol {
+    width: 66%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dataCol h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: start;
+    margin-bottom: 0;
+}

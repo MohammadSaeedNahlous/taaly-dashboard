@@ -1,0 +1,36 @@
+.main {
+    border-radius: 15px;
+    background-color: #e7e8f8;
+    margin: 0px;
+    padding: 20px;
+    height: 657px;
+
+
+}
+
+.main table * {
+    background-color: transparent;
+
+}
+
+
+
+.main tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.title {
+    color: #1E00B9;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.tableHeader {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.tableQuestion td {
+    font-weight: 600;
+    font-size: 20px;
+}

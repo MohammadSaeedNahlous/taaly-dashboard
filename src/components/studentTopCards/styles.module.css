@@ -1,0 +1,18 @@
+.card {
+    border-radius: 15px;
+    width: 24%;
+    height: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+
+    background-color: #e9e7f9;
+    padding: 15px;
+}
+
+.card h3 {
+    text-align: start;
+    font-weight: 600;
+    font-size: 22px;
+}
