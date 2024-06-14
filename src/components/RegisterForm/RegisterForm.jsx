@@ -90,6 +90,7 @@ const RegisterForm = () => {
                 })
                 .catch((error) => {
                     console.error("Error creating user:", error);
+                    setErrorState(error.code)
                 });
 
         } catch (err) {
@@ -146,7 +147,7 @@ const RegisterForm = () => {
                         </div>
                         <div className={ styles.formControlContainer }>
                             <label for="exampleInputPassword1" className="form-label mt-4">Repeat Password</label>
-                            <input minLength={ 6 } onChange={ onChangeHandler } name='password1'
+                            <input minLength={ 6 } onChange={ onChangeHandler } name='password2'
                                 type={ showpassword1 ? "text" : "password" } className="form-control" placeholder="6+ strong characters " autoComplete="off" />
                             <img style={ { cursor: 'pointer' } }
                                 onClick={ () => setShowpassword1(prev => !prev) }
@@ -154,7 +155,7 @@ const RegisterForm = () => {
                         </div>
                         <div className='d-flex align-items-center justify-content-center flex-column my-2 position-relative'>
                             <small className='my-2'>Already have an account?<Link href={ '/' }> Login here!</Link></small>
-                            <button className={ styles.loginBtn }>
+                            <button disabled={ !creds.email || !creds.name || !creds.password || !creds.password2 || creds.password != creds.password2 } className={ styles.loginBtn }>
                                 { loadingSt ? <div className="spinner-border text-light" role="status">
 
                                 </div> : 'Signup' }</button>

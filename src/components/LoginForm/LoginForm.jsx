@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import ForgetPasswordModal from '../ForgetPasswordModal/ForgetPasswordModal';
 import { useUser } from '@/src/contexts/UserContext';
 import { doc, getDoc } from 'firebase/firestore';
+import Link from 'next/link';
 
 
 const LoginForm = () => {
@@ -81,7 +82,7 @@ const LoginForm = () => {
                     }
                 })
                 .catch((error) => {
-                    console.error("Error signing in or fetching user data:", error);
+                    setErrorState(error.code)
                 });
 
 
@@ -142,6 +143,7 @@ const LoginForm = () => {
                                 { isLoading ? <div className="spinner-border text-light" role="status">
 
                                 </div> : 'Login' }</button>
+                            <small className='my-2'>Dont have an account? <Link href={ '/register' }> Register here!</Link></small>
                             { errorState != null && <div className={ "alert alert-danger " + styles.alert } role="alert">
                                 { errorState == "Firebase: Error (auth/invalid-credential)." ? "Wrong Credintals" : errorState }
                             </div> }
