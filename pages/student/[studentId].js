@@ -11,6 +11,7 @@ import Layout from '@/src/components/Layout/Layout'
 import StudentTopCards from '@/src/components/studentTopCards/StudentTopCards'
 import CircularProgressCard2 from '@/src/components/CircularProgressCard2/CircularProgressCard2'
 import withAuth from '@/src/utils/functions/HOC/withAuth'
+import Head from 'next/head'
 
 
 
@@ -44,67 +45,74 @@ const StudentPage = ({ data }) => {
     // }, [query.studentId])
 
     return (
-        <main className={ styles.main }>
-            <div style={ { width: '25%' } } className='w'>
-                <StudentInfoCol img={ data?.img } name={ data?.name }
-                    studies={ data?.studies }
-                    email={ data?.email }
-                    mobile={ data?.mobile }
-                    bio={ data?.bio }
-                    workExp={ data?.workExp }
-                    location={ data?.location } />
-            </div>
-            <div style={ { width: '75%' } } className='d-flex align-items-center justify-content-start flex-column'>
-                <div className='w-100'>
-                    <StudentTopCards />
+        <>
+            <Head>
+                <title>Student Profile - Taaly</title>
+                <meta name="description" content="View student profile and progress on Taaly. Access personalized learning materials and track learning achievements." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
+
+            <main className={ styles.main }>
+                <div style={ { width: '25%' } } className='w'>
+                    <StudentInfoCol img={ data?.img } name={ data?.name }
+                        studies={ data?.studies }
+                        email={ data?.email }
+                        mobile={ data?.mobile }
+                        bio={ data?.bio }
+                        workExp={ data?.workExp }
+                        location={ data?.location } />
                 </div>
-
-                <div style={ { height: '600px' } } className='d-flex align-items-start justify-content-between my-3 w-100'>
-                    <div style={ { width: '35%', height: '100%' } }
-                        className='d-flex align-items-center justify-content-between flex-column h-100 '>
-                        <div className={ styles.cardContainer }>
-                            <CircularProgressCard
-                                CircularProgressWidthPercent={ 50 }
-                                innerTextColor={ '#1e01b8' }
-                                innerTextComponent={ <>
-                                    <h1 className={ styles.innerTextCircular }>200</h1>
-                                    <h1 className={ styles.innerTextCircular }>Hours</h1>
-                                </> }
-                                percent={ 90 }
-                                strokeColor={ '#1e01b8' }
-                                textComponent={ <p className={ styles.cardDesc }>Hours spent by Learner over this program.</p> }
-                                titleComponent={ <h1 className={ styles.titleText }>Hours Spent</h1> }
-                                trailColor={ '#988bde' }
-                            />
-                        </div>
-                        <div style={ { marginTop: '1px' } } className={ styles.cardContainer }>
-                            <CircularProgressCard
-                                CircularProgressWidthPercent={ 50 }
-                                innerTextColor={ '#b5e13d' }
-                                innerTextComponent={ <>
-                                    <h1 className={ styles.innerTextCircular2 }>200</h1>
-                                    <h1 className={ styles.innerTextCircular2 }>Hours</h1>
-                                </> }
-                                percent={ 90 }
-                                strokeColor={ '#b5e13d' }
-                                textComponent={ <p className={ styles.cardDesc }>Hours spent by Learner over this program.</p> }
-                                titleComponent={ <h1 className={ styles.titleText1 }>Credit Spent</h1> }
-                                trailColor={ '#dcfa05' }
-                            />
-                        </div>
-
-
-                    </div>
-                    <div style={ { width: '63%', height: '100%' } }>
-                        <MeassureCard />
-
-
+                <div style={ { width: '75%' } } className='d-flex align-items-center justify-content-start flex-column'>
+                    <div className='w-100'>
+                        <StudentTopCards />
                     </div>
 
-                </div>
-            </div>
+                    <div style={ { height: '600px' } } className='d-flex align-items-start justify-content-between my-3 w-100'>
+                        <div style={ { width: '35%', height: '100%' } }
+                            className='d-flex align-items-center justify-content-between flex-column h-100 '>
+                            <div className={ styles.cardContainer }>
+                                <CircularProgressCard
+                                    CircularProgressWidthPercent={ 50 }
+                                    innerTextColor={ '#1e01b8' }
+                                    innerTextComponent={ <>
+                                        <h1 className={ styles.innerTextCircular }>200</h1>
+                                        <h1 className={ styles.innerTextCircular }>Hours</h1>
+                                    </> }
+                                    percent={ 90 }
+                                    strokeColor={ '#1e01b8' }
+                                    textComponent={ <p className={ styles.cardDesc }>Hours spent by Learner over this program.</p> }
+                                    titleComponent={ <h1 className={ styles.titleText }>Hours Spent</h1> }
+                                    trailColor={ '#988bde' }
+                                />
+                            </div>
+                            <div style={ { marginTop: '1px' } } className={ styles.cardContainer }>
+                                <CircularProgressCard
+                                    CircularProgressWidthPercent={ 50 }
+                                    innerTextColor={ '#b5e13d' }
+                                    innerTextComponent={ <>
+                                        <h1 className={ styles.innerTextCircular2 }>200</h1>
+                                        <h1 className={ styles.innerTextCircular2 }>Hours</h1>
+                                    </> }
+                                    percent={ 90 }
+                                    strokeColor={ '#b5e13d' }
+                                    textComponent={ <p className={ styles.cardDesc }>Hours spent by Learner over this program.</p> }
+                                    titleComponent={ <h1 className={ styles.titleText1 }>Credit Spent</h1> }
+                                    trailColor={ '#dcfa05' }
+                                />
+                            </div>
 
-        </main>
+
+                        </div>
+                        <div style={ { width: '63%', height: '100%' } }>
+                            <MeassureCard />
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </main></>
     )
 }
 

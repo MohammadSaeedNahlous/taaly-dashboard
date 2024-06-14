@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 import LearnerRow from './LearnerRow/LearnerRow'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '@/src/lib/firebase'
+import LoadingComponent from '../LoadingComponent/LoadingComponent'
 const LearnersTable = () => {
 
     const [data, setData] = useState([])
@@ -75,38 +76,39 @@ const LearnersTable = () => {
             </div>
 
             <div className={ styles.tableContainer }>
-                <table class="table w-100">
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Level</th>
-                            <th scope="col">Program</th>
-                            <th scope="col">Organization</th>
-                            <th scope="col" style={ { width: '50px' } }>Rating</th>
-                            <th scope="col">Hours spent</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { data.map(item => (
-                            <LearnerRow
-                                hrsSpent={ Number(item.hrsSpent) }
-                                img={ item.img }
-                                level={ item.level }
-                                org={ item.org }
-                                program={ item.program }
-                                name={ item.name }
-                                rating={ item.rating }
-                                id={ item.id }
+                { data.length == 0 ?
+                    <div className='mt-4'><LoadingComponent small /></div> : <table style={ { width: '100%' } } className="table w-100">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Program</th>
+                                <th scope="col">Organization</th>
+                                <th scope="col" style={ { width: '50px' } }>Rating</th>
+                                <th scope="col">Hours spent</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            { data.map(item => (
+                                <LearnerRow
+                                    hrsSpent={ Number(item.hrsSpent) }
+                                    img={ item.img }
+                                    level={ item.level }
+                                    org={ item.org }
+                                    program={ item.program }
+                                    name={ item.name }
+                                    rating={ item.rating }
+                                    id={ item.id }
 
-                            />
-                        )) }
+                                />
+                            )) }
 
 
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table> }
             </div>
 
         </div>

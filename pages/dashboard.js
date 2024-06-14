@@ -7,8 +7,16 @@ import React from 'react'
 import styles from '../styles/dashboard.module.css'
 import Layout from '@/src/components/Layout/Layout'
 import withAuth from '@/src/utils/functions/HOC/withAuth'
+import Head from 'next/head'
 const DashboardPage = () => {
-    return (
+    return (<>
+
+
+        <Head>
+            <title>Monitoring - Taaly</title>
+            <meta name="description" content="Monitor learner progress and platform performance on Taaly. Track statistics, analyze data, and optimize learning experiences." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <main className={ styles.main }>
             <SideNav />
             <DashboardMidSection />
@@ -40,7 +48,7 @@ const DashboardPage = () => {
                     </h6>
                 </div>
             </div>
-        </main>
+        </main></>
     )
 }
 

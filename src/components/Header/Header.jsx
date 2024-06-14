@@ -1,6 +1,9 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { useUser } from '@/src/contexts/UserContext'
 const Header = () => {
+    const { user } = useUser()
+
     return (
         <header className={ styles.header }>
             <div className={ styles.brandContainer }>

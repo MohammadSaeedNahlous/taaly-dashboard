@@ -124,11 +124,18 @@
 
 .tableContainer {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* margin-top: 20px; */
 }
 
 .tableContainer thead {
     border: none;
+}
+
+.tableContainer tbody {
+    min-height: 400px;
 }
 
 .tableContainer th {

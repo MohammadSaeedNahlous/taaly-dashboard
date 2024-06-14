@@ -5,7 +5,7 @@ const MeassureCard = () => {
         <div className={ styles.main }>
             <h2 className={ styles.title } >Impact Measurement</h2>
             <div>
-                <table class={ "table w-100 " + styles.tableQuestion }>
+                <table className={ "table w-100 " + styles.tableQuestion }>
                     <thead>
                         <tr>
                             <th className={ styles.tableHeader } scope="col">Question</th>

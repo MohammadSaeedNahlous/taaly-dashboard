@@ -1,15 +1,19 @@
-import Header from '@/src/components/Header/Header';
-import '@/styles/globals.css'
-import "bootstrap/dist/css/bootstrap.min.css";
-
-// Import css files
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function MyApp({ Component, pageProps }) {
-  const getLayout = Component.getLayout || ((page) => page);
+import { UserProvider } from '@/src/contexts/UserContext';
+import Layout from '@/src/components/Layout/Layout';
 
-  return getLayout(<Component { ...pageProps } />);
+function MyApp({ Component, pageProps }) {
+  const getLayout = Component.getLayout || ((page) => <Layout>{ page }</Layout>);
+
+  return (
+    <UserProvider>
+      { getLayout(<Component { ...pageProps } />) }
+    </UserProvider>
+  );
 }
 
 export default MyApp;
